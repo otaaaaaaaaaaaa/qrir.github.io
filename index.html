@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>qrir | Creative Portfolio</title>
+<meta name="description" content="qrirの作品やサービスを紹介する公式サイト。LINE botやLINEスタンプなどを制作しています。">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", "Noto Sans JP", sans-serif;
+  color: #222;
+  background: #fff;
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,.95);
+  z-index: 10;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #888;
+}
+
+.hero {
+  min-height: 650px;
+  padding: 140px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f8f8f8;
+}
+
+.hero-label {
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #888;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(55px, 11vw, 115px);
+  line-height: 1;
+  letter-spacing: -5px;
+  font-weight: 800;
+}
+
+.hero p {
+  margin-top: 30px;
+  color: #666;
+  font-size: 16px;
+}
+
+.hero-button {
+  display: inline-block;
+  width: fit-content;
+  margin-top: 35px;
+  padding: 13px 30px;
+  border: 1px solid #222;
+  font-size: 13px;
+  transition: .3s;
+}
+
+.hero-button:hover {
+  background: #222;
+  color: white;
+}
+
+section {
+  padding: 110px 10%;
+}
+
+.section-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #999;
+}
+
+.section-title {
+  font-size: 36px;
+  margin: 8px 0 45px;
+  letter-spacing: -1px;
+}
+
+.about-text {
+  max-width: 650px;
+  font-size: 15px;
+  color: #666;
+}
+
+.works {
+  background: #f8f8f8;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.work-card {
+  background: white;
+  border: 1px solid #eee;
+  transition: .3s;
+}
+
+.work-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px #0000000c;
+}
+
+.work-image {
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eeeeee;
+  font-size: 65px;
+}
+
+.work-info {
+  padding: 25px;
+}
+
+.work-info small {
+  color: #999;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.work-info h3 {
+  font-size: 21px;
+  margin: 8px 0;
+}
+
+.work-info p {
+  font-size: 13px;
+  color: #777;
+}
+
+.services {
+  text-align: center;
+}
+
+.service-text {
+  color: #777;
+  font-size: 14px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact {
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.contact p {
+  color: #777;
+  font-size: 14px;
+}
+
+.contact a {
+  display: inline-block;
+  margin-top: 25px;
+  background: #222;
+  color: white;
+  padding: 13px 35px;
+  font-size: 13px;
+}
+
+footer {
+  padding: 35px 8%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #999;
+}
+
+@media(max-width:650px) {
+  header {
+    padding: 0 5%;
+  }
+
+  nav {
+    gap: 13px;
+    font-size: 10px;
+  }
+
+  .hero {
+    min-height: 550px;
+    padding: 100px 8%;
+  }
+
+  .hero h1 {
+    letter-spacing: -3px;
+  }
+
+  section {
+    padding: 80px 7%;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-image {
+    height: 200px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="#" class="logo">qrir.</a>
+  <nav>
+    <a href="#about">ABOUT</a>
+    <a href="#works">WORKS</a>
+    <a href="#services">SERVICES</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="hero">
+    <div class="hero-label">CREATIVE PORTFOLIO</div>
+    <h1>Make<br>Something<br>New.</h1>
+    <p>
+      アイデアを形に。<br>
+      qrirの作品と活動を紹介します。
+    </p>
+    <a href="#works" class="hero-button">
+      EXPLORE WORKS →
+    </a>
+  </div>
+
+  <section id="about">
+    <div class="section-label">01 / ABOUT</div>
+    <h2 class="section-title">About qrir.</h2>
+    <div class="about-text">
+      <p>
+        qrirは、アイデアをもとにさまざまなものを
+        制作・開発するクリエイティブプロジェクトです。
+      </p>
+      <br>
+      <p>
+        LINE botやLINEスタンプなど、
+        デジタルを中心とした作品を制作しています。
+        面白いアイデアを実際に形にすることを目指しています。
+      </p>
+    </div>
+  </section>
+
+  <section id="works" class="works">
+    <div class="section-label">02 / WORKS</div>
+    <h2 class="section-title">Selected Works.</h2>
+
+    <div class="work-grid">
+
+      <div class="work-card">
+        <div class="work-image">🤖</div>
+        <div class="work-info">
+          <small>LINE / DEVELOPMENT</small>
+          <h3>LINE bot</h3>
+          <p>
+            LINEを活用したオリジナルbot。
+            独自の機能やポイントシステムなど、
+            便利で楽しい仕組みを開発しています。
+          </p>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-image">🎨</div>
+        <div class="work-info">
+          <small>LINE / DESIGN</small>
+          <h3>LINEスタンプ</h3>
+          <p>
+            オリジナルキャラクターや
+            独自のアイデアを取り入れた
+            LINEスタンプを制作しています。
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="section-label">03 / SERVICES</div>
+    <h2 class="section-title">What We Do.</h2>
+    <p class="service-text">
+      アイデアを形にするために、
+      プログラミング・デザインなど
+      さまざまな分野に挑戦しています。
+      <br><br>
+      今後も新しい作品やサービスを
+      こちらのサイトで紹介していきます。
+    </p>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="section-label">04 / CONTACT</div>
+    <h2 class="section-title">Get in Touch.</h2>
+    <p>
+      お問い合わせ・ご質問などはこちらから。
+    </p>
+    <a href="mailto:YOUR_EMAIL@example.com">
+      CONTACT →
+    </a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="logo">qrir.</div>
+  <div>© 2026 qrir. All Rights Reserved.</div>
+</footer>
+
+</body>
+</html>
