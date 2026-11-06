@@ -4,10 +4,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>qrir | Creative Portfolio</title>
-<meta name="description" content="qrirの作品やサービスを紹介する公式サイト。LINE botやLINEスタンプなどを制作しています。">
+
+<meta name="description" content="qrirの公式ポートフォリオ。LINE botやオリジナルLINEスタンプなど、さまざまな作品を紹介しています。">
 
 <style>
+
+/* =========================
+   基本設定
+========================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -19,8 +26,13 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont,
-    "Helvetica Neue", "Noto Sans JP", sans-serif;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    "Noto Sans JP",
+    sans-serif;
+
   color: #222;
   background: #fff;
   line-height: 1.8;
@@ -31,16 +43,22 @@ a {
   color: inherit;
 }
 
+/* =========================
+   ヘッダー
+========================= */
+
 header {
   height: 75px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 8%;
+
   border-bottom: 1px solid #eee;
+
   position: sticky;
   top: 0;
-  background: rgba(255,255,255,.95);
+  background: rgba(255,255,255,.96);
   z-index: 10;
 }
 
@@ -52,21 +70,27 @@ header {
 
 nav {
   display: flex;
-  gap: 30px;
-  font-size: 13px;
+  gap: 25px;
+  font-size: 12px;
   font-weight: 600;
 }
 
 nav a:hover {
-  color: #888;
+  color: #999;
 }
+
+/* =========================
+   トップページ
+========================= */
 
 .hero {
   min-height: 650px;
   padding: 140px 10%;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   background: #f8f8f8;
 }
 
@@ -93,10 +117,13 @@ nav a:hover {
 .hero-button {
   display: inline-block;
   width: fit-content;
+
   margin-top: 35px;
   padding: 13px 30px;
+
   border: 1px solid #222;
   font-size: 13px;
+
   transition: .3s;
 }
 
@@ -104,6 +131,10 @@ nav a:hover {
   background: #222;
   color: white;
 }
+
+/* =========================
+   共通セクション
+========================= */
 
 section {
   padding: 110px 10%;
@@ -121,11 +152,19 @@ section {
   letter-spacing: -1px;
 }
 
+/* =========================
+   ABOUT
+========================= */
+
 .about-text {
   max-width: 650px;
   font-size: 15px;
   color: #666;
 }
+
+/* =========================
+   WORKS
+========================= */
 
 .works {
   background: #f8f8f8;
@@ -140,22 +179,46 @@ section {
 .work-card {
   background: white;
   border: 1px solid #eee;
+
+  overflow: hidden;
+
   transition: .3s;
 }
 
 .work-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 30px #0000000c;
+
+  box-shadow:
+    0 12px 30px #0000000c;
 }
 
+/* 作品画像 */
+
 .work-image {
-  height: 230px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 280px;
+  overflow: hidden;
   background: #eeeeee;
-  font-size: 65px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.work-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  display: block;
+
+  transition: .4s;
+}
+
+.work-card:hover .work-image img {
+  transform: scale(1.04);
+}
+
+/* 作品説明 */
 
 .work-info {
   padding: 25px;
@@ -177,6 +240,25 @@ section {
   color: #777;
 }
 
+/* 作品カテゴリー */
+
+.work-tag {
+  display: inline-block;
+
+  margin-top: 15px;
+  padding: 4px 10px;
+
+  background: #f2f2f2;
+  color: #777;
+
+  font-size: 10px;
+  border-radius: 3px;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
 .services {
   text-align: center;
 }
@@ -184,9 +266,14 @@ section {
 .service-text {
   color: #777;
   font-size: 14px;
+
   max-width: 600px;
   margin: auto;
 }
+
+/* =========================
+   CONTACT
+========================= */
 
 .contact {
   background: #f8f8f8;
@@ -200,28 +287,48 @@ section {
 
 .contact a {
   display: inline-block;
+
   margin-top: 25px;
   background: #222;
   color: white;
+
   padding: 13px 35px;
   font-size: 13px;
+
+  transition: .3s;
 }
+
+.contact a:hover {
+  background: #555;
+}
+
+/* =========================
+   フッター
+========================= */
 
 footer {
   padding: 35px 8%;
+
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
   font-size: 12px;
   color: #999;
 }
 
+/* =========================
+   スマートフォン対応
+========================= */
+
 @media(max-width:650px) {
+
   header {
     padding: 0 5%;
   }
 
   nav {
-    gap: 13px;
+    gap: 12px;
     font-size: 10px;
   }
 
@@ -247,7 +354,7 @@ footer {
   }
 
   .work-image {
-    height: 200px;
+    height: 260px;
   }
 
   footer {
@@ -255,116 +362,356 @@ footer {
     gap: 10px;
   }
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
+
   <a href="#" class="logo">qrir.</a>
+
   <nav>
     <a href="#about">ABOUT</a>
     <a href="#works">WORKS</a>
     <a href="#services">SERVICES</a>
     <a href="#contact">CONTACT</a>
   </nav>
+
 </header>
+
 
 <main>
 
-  <div class="hero">
-    <div class="hero-label">CREATIVE PORTFOLIO</div>
-    <h1>Make<br>Something<br>New.</h1>
-    <p>
-      アイデアを形に。<br>
-      qrirの作品と活動を紹介します。
-    </p>
-    <a href="#works" class="hero-button">
-      EXPLORE WORKS →
-    </a>
+<!-- =========================
+     HOME
+========================= -->
+
+<div class="hero">
+
+  <div class="hero-label">
+    CREATIVE PORTFOLIO
   </div>
 
-  <section id="about">
-    <div class="section-label">01 / ABOUT</div>
-    <h2 class="section-title">About qrir.</h2>
-    <div class="about-text">
-      <p>
-        qrirは、アイデアをもとにさまざまなものを
-        制作・開発するクリエイティブプロジェクトです。
-      </p>
-      <br>
-      <p>
-        LINE botやLINEスタンプなど、
-        デジタルを中心とした作品を制作しています。
-        面白いアイデアを実際に形にすることを目指しています。
-      </p>
-    </div>
-  </section>
+  <h1>
+    Make<br>
+    Something<br>
+    New.
+  </h1>
 
-  <section id="works" class="works">
-    <div class="section-label">02 / WORKS</div>
-    <h2 class="section-title">Selected Works.</h2>
+  <p>
+    アイデアを形に。<br>
+    qrirの作品と活動を紹介します。
+  </p>
 
-    <div class="work-grid">
+  <a href="#works" class="hero-button">
+    EXPLORE WORKS →
+  </a>
 
-      <div class="work-card">
-        <div class="work-image">🤖</div>
-        <div class="work-info">
-          <small>LINE / DEVELOPMENT</small>
-          <h3>LINE bot</h3>
-          <p>
-            LINEを活用したオリジナルbot。
-            独自の機能やポイントシステムなど、
-            便利で楽しい仕組みを開発しています。
-          </p>
-        </div>
-      </div>
+</div>
 
-      <div class="work-card">
-        <div class="work-image">🎨</div>
-        <div class="work-info">
-          <small>LINE / DESIGN</small>
-          <h3>LINEスタンプ</h3>
-          <p>
-            オリジナルキャラクターや
-            独自のアイデアを取り入れた
-            LINEスタンプを制作しています。
-          </p>
-        </div>
-      </div>
 
-    </div>
-  </section>
+<!-- =========================
+     ABOUT
+========================= -->
 
-  <section id="services" class="services">
-    <div class="section-label">03 / SERVICES</div>
-    <h2 class="section-title">What We Do.</h2>
-    <p class="service-text">
-      アイデアを形にするために、
-      プログラミング・デザインなど
-      さまざまな分野に挑戦しています。
-      <br><br>
-      今後も新しい作品やサービスを
-      こちらのサイトで紹介していきます。
-    </p>
-  </section>
+<section id="about">
 
-  <section id="contact" class="contact">
-    <div class="section-label">04 / CONTACT</div>
-    <h2 class="section-title">Get in Touch.</h2>
+  <div class="section-label">
+    01 / ABOUT
+  </div>
+
+  <h2 class="section-title">
+    About qrir.
+  </h2>
+
+  <div class="about-text">
+
     <p>
-      お問い合わせ・ご質問などはこちらから。
+      qrirは、アイデアをもとに
+      さまざまなものを制作・開発する
+      クリエイティブプロジェクトです。
     </p>
-    <a href="mailto:YOUR_EMAIL@example.com">
-      CONTACT →
-    </a>
-  </section>
+
+    <br>
+
+    <p>
+      LINE botやLINEスタンプなど、
+      デジタルを中心とした作品を制作しています。
+    </p>
+
+    <br>
+
+    <p>
+      面白いアイデアを実際に形にすること。
+      そして、新しい可能性に挑戦することを
+      大切にしています。
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     WORKS
+========================= -->
+
+<section id="works" class="works">
+
+  <div class="section-label">
+    02 / WORKS
+  </div>
+
+  <h2 class="section-title">
+    Selected Works.
+  </h2>
+
+  <div class="work-grid">
+
+
+    <!-- ゲイの手 -->
+
+    <div class="work-card">
+
+      <div class="work-image">
+
+        <img
+          src="geinote.PNG"
+          alt="ゲイの手"
+          loading="lazy"
+        >
+
+      </div>
+
+      <div class="work-info">
+
+        <small>
+          LINE / DEVELOPMENT
+        </small>
+
+        <h3>
+          ゲイの手
+        </h3>
+
+        <p>
+          ポイント獲得、アイテム購入・使用、
+          ランキングなどの機能を備えた
+          オリジナルLINE bot。
+        </p>
+
+        <span class="work-tag">
+          LINE BOT
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- 山【偽物】 -->
+
+    <div class="work-card">
+
+      <div class="work-image">
+
+        <img
+          src="yama.PNG"
+          alt="山【偽物】"
+          loading="lazy"
+        >
+
+      </div>
+
+      <div class="work-info">
+
+        <small>
+          LINE / CHAT
+        </small>
+
+        <h3>
+          山【偽物】
+        </h3>
+
+        <p>
+          LINE上での会話を活用した
+          オリジナル作品。
+        </p>
+
+        <span class="work-tag">
+          LINE PROJECT
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- 山スタンプ〜 -->
+
+    <div class="work-card">
+
+      <div class="work-image">
+
+        <img
+          src="yama-stamp1.PNG"
+          alt="山スタンプ〜"
+          loading="lazy"
+        >
+
+      </div>
+
+      <div class="work-info">
+
+        <small>
+          LINE / STICKERS
+        </small>
+
+        <h3>
+          山スタンプ〜
+        </h3>
+
+        <p>
+          写真やユニークなアイデアを
+          取り入れたオリジナルLINEスタンプ。
+        </p>
+
+        <span class="work-tag">
+          LINE STICKERS
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- 山スタンプ2 -->
+
+    <div class="work-card">
+
+      <div class="work-image">
+
+        <img
+          src="yama-stamp2.PNG"
+          alt="山スタンプ2"
+          loading="lazy"
+        >
+
+      </div>
+
+      <div class="work-info">
+
+        <small>
+          LINE / STICKERS
+        </small>
+
+        <h3>
+          山スタンプ2
+        </h3>
+
+        <p>
+          オリジナル写真やデザインを
+          使用したLINEスタンプ第2弾。
+        </p>
+
+        <span class="work-tag">
+          LINE STICKERS
+        </span>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="services" class="services">
+
+  <div class="section-label">
+    03 / SERVICES
+  </div>
+
+  <h2 class="section-title">
+    What We Do.
+  </h2>
+
+  <p class="service-text">
+
+    アイデアを形にするために、
+    プログラミング・デザインなど
+    さまざまな分野に挑戦しています。
+
+    <br><br>
+
+    LINE botの開発や
+    オリジナルコンテンツの制作を通じて、
+    新しいサービスを生み出していきます。
+
+    <br><br>
+
+    今後も新しい作品やサービスを
+    こちらのサイトで紹介していきます。
+
+  </p>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact">
+
+  <div class="section-label">
+    04 / CONTACT
+  </div>
+
+  <h2 class="section-title">
+    Get in Touch.
+  </h2>
+
+  <p>
+    お問い合わせ・ご質問などはこちらから。
+  </p>
+
+  <!-- メールアドレスを設定したら変更 -->
+
+  <a href="mailto:YOUR_EMAIL@example.com">
+    CONTACT →
+  </a>
+
+</section>
 
 </main>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
-  <div class="logo">qrir.</div>
-  <div>© 2026 qrir. All Rights Reserved.</div>
+
+  <div class="logo">
+    qrir.
+  </div>
+
+  <div>
+    © 2026 qrir. All Rights Reserved.
+  </div>
+
 </footer>
 
 </body>
